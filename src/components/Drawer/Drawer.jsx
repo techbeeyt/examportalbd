@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom"
+import { useSelector } from 'react-redux';
 
 const Drawer = () => {
-  var isLogged = true;
+  const AppState = useSelector(store => store.AppState);
+  const AuthState = useSelector(store => store.AuthState);
+
   return (
-    <div class="drawer-side">
+    <div class="drawer-side" data-theme={AppState.theme}>
         <label for="my-drawer" class="drawer-overlay"></label>
         <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+            <li>
+              <Link class="normal-case text-xl font-semibold" to="/">OnlineExam</Link>
+            </li>
             {
-              isLogged ? (
+              AuthState.user ? (
                 <li>
                   <Link to='/my-preperation'>My Dashboard</Link>
                 </li>
@@ -20,16 +26,16 @@ const Drawer = () => {
               <Link to='/live-exams'>Live Exams</Link>
             </li>
             <li>
-              <Link to='/my-preperation'>Exam Schedule</Link>
+              <Link to='/exam-schedule'>Exam Schedule</Link>
             </li>
             <li>
-              <Link to='/my-preperation'>Settings</Link>
+              <Link to='/settings'>Settings</Link>
             </li>
             <li>
-              <Link to='/my-preperation'>Help</Link>
+              <Link to='/help'>Help</Link>
             </li>
           {
-            isLogged ? null : (
+            AuthState.user ? null : (
               <div class="btn-group mt-32 px-4">
                 <button class="btn">Login</button>
                 <button class="btn btn-active">Registraion</button>
