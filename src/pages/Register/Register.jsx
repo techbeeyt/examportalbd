@@ -13,7 +13,6 @@ const Register = () => {
       ...previousForm
     }
     form[name] = value;
-    console.log(form);
     dispatch(setLoginForm(form));
   }
   const doLogin = () => {
@@ -36,8 +35,9 @@ const Register = () => {
         <input  className='px-4 py-2 border border-slate-400 rounded-md mb-4' name="password" onChange={handleChange} value={formData.loginForm.password} />
         <label htmlFor="cpassword" className='mb-1'>Confirm Password:</label>
         <input  className='px-4 py-2 border border-slate-400 rounded-md mb-4' name="cpassword" onChange={handleChange} value={formData.loginForm.password} />
-        <button type="button" className='btn btn-primary' onClick={doLogin}>Log In</button>
+        <button type="button" className='btn btn-primary mt-2' onClick={doLogin}>Register</button>
       </form>
+      
     </div>
     <div className='mt-4 flex flex-col items-center'>
       <Link to="/login">Already have an account ?</Link>

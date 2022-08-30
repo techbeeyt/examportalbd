@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { setLoginForm } from '../../store/FormState';
 import { Link, Outlet } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -34,8 +35,9 @@ const Login = () => {
           <input className='px-4 py-2 border border-slate-500 rounded-md mb-4' name="email" onChange={handleChange} value={formData.loginForm.email} />
           <label htmlFor="password" className='mb-1'>Password:</label>
           <input  className='px-4 py-2 border border-slate-500 rounded-md mb-4' name="password" onChange={handleChange} value={formData.loginForm.password} />
-          <button type="button" className='btn btn-primary' onClick={doLogin}>Log In</button>
+          <button type="button" className='btn btn-primary mt-2' onClick={doLogin}>Log In</button>
         </form>
+        <button className='btn flex gap-2'><FcGoogle size={20} /> Sign In with Google</button>
       </div>
 
       <div className='mt-4 flex flex-col items-center'>

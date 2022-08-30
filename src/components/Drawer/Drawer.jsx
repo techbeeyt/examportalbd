@@ -13,9 +13,9 @@ const Drawer = () => {
               <Link class="normal-case text-xl font-semibold" to="/">OnlineExam</Link>
             </li>
             {
-              AuthState.user ? (
+              AuthState.user || true ? (
                 <li>
-                  <Link to='/my-preperation'>My Dashboard</Link>
+                  <Link to='/dashboard'>My Dashboard</Link>
                 </li>
               ) : null
             }

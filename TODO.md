@@ -21,3 +21,7 @@
 1. My dashboard page
 
 ---
+
+1. Live exam page
+1. Live contest page
+1. All exam page
