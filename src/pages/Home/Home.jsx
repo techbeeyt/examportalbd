@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import BlogFeed from '../../components/BlogFeed/BlogFeed';
 
 const Home = () => {
   const AppState = useSelector(store => store.AppState);
@@ -9,31 +10,7 @@ const Home = () => {
       <div className='col-span-8 bg-base-100 pt-10 px-4'>
         <div className='flex flex-col gap-4'>
           {/* Blog and News Feed */}
-          <div className='flex flex-col'>
-            <div className='mb-4'>
-              <h1 className='text-xl font-semibold text-sky-600'>HSC Exam batch result has been published</h1>
-              <div className='flex gap-4'>
-                <span>by Admin1</span>
-                <span>45 hours ago</span>
-              </div>
-            </div>
-            <div className='flex justify-center items-center'>
-              <div className='bg-slate-500 self-stretch w-1 rounded-full mr-2 flex-shrink-0'></div>
-              <p>
-                Result has been published but there is a problem man. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus corrupti, ducimus doloribus, nihil soluta iste sapiente aut maiores sint autem delectus recusandae cum quas. Earum optio nemo pariatur rem.
-              </p>
-            </div>
-            <div className='bg-base-200 px-4 py-2 rounded-md mt-3 mb-4 shadow-sm'>
-              <div className='flex justify-between items-center'>
-                <div>
-                  12123 views +123 votes
-                </div>
-                <div>
-                  Admin1  45 hours ago  23 comments
-                </div>
-              </div>
-            </div>
-          </div>
+          <BlogFeed />
 
           <div className='flex flex-col'>
             <div className='mb-4'>
@@ -109,7 +86,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='bg-base-200 m-4 w-5/6 rounded-lg flex flex-col shadow-md border border-base-300'>
+        <div className='bg-base-200 m-4 w-5/6 rounded-lg flex flex-col shadow-sm border border-base-300'>
           <div className='p-2 border-b border-base-300'>
             <h1 className='text-lg font-semibold pl-4'>Top Contributions</h1>
           </div>

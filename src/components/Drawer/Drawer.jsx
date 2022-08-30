@@ -37,8 +37,8 @@ const Drawer = () => {
           {
             AuthState.user ? null : (
               <div class="btn-group mt-32 px-4">
-                <button class="btn">Login</button>
-                <button class="btn btn-active">Registraion</button>
+                <Link class="btn" to="/login">Login</Link>
+                <Link class="btn btn-active" to="/register">Registraion</Link>
               </div>
             )
           }

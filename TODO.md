@@ -1,22 +1,23 @@
 # Todo
 
-<a href="#current"><b>Doing: </b>Complete landing page</a>
+<a href="#current"><b>Doing: </b>Blog Feed</a>
 
 ## Front End
 
 ----
-<i id="current">24-08-2022 - current</i>
+<i>24-08-2022 - 26-08-2022</i>
 
 1. Set-up redux
 1. Set Theme state
-1. <b>--> Complete Landing Page </b>
+1. Complete Landing Page
 
 ----
 
-<i>Later</i>
+<i id="current">26-08-2022 - current</i>
 
 ---
-1. State management
-2. Conditional Rendering for logged or non logged
+1. Log In and Registration Page
+1. <b>--> Blog Feed </b>
+1. My dashboard page
 
 ---
