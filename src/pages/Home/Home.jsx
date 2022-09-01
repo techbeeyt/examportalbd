@@ -5,65 +5,15 @@ import BlogFeed from '../../components/BlogFeed/BlogFeed';
 const Home = () => {
   const AppState = useSelector(store => store.AppState);
   const AuthState = useSelector( store => store.AuthState);
+  const PostState = useSelector( store => store.PostState);
   return (
-    <div className='grid grid-cols-12 mx-40'>
-      <div className='col-span-8 bg-base-100 pt-10 px-4'>
+    <div className='grid grid-cols-12 mx-4 md:mx-10 lg:mx-40'>
+      <div className='col-span-12 lg:col-span-8 bg-base-100 pt-10 px-4'>
         <div className='flex flex-col gap-4'>
           {/* Blog and News Feed */}
-          <BlogFeed />
-
-          <div className='flex flex-col'>
-            <div className='mb-4'>
-              <h1 className='text-xl font-semibold text-base-content'>HSC Exam batch result has been published</h1>
-              <div className='flex gap-4'>
-                <span>by Admin1</span>
-                <span>45 hours ago</span>
-              </div>
-            </div>
-            <div className='flex justify-center items-center'>
-              <div className='bg-slate-500 self-stretch w-1 rounded-full mr-2 flex-shrink-0'></div>
-              <p>
-                Result has been published but there is a problem man. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus corrupti, ducimus doloribus, nihil soluta iste sapiente aut maiores sint autem delectus recusandae cum quas. Earum optio nemo pariatur rem.
-              </p>
-            </div>
-            <div className='p-2 rounded-md border border-gray-500 mt-3 mb-4'>
-              <div className='flex justify-between items-center'>
-                <div>
-                  12123 views +123 votes
-                </div>
-                <div>
-                  Admin1  45 hours ago  23 comments
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='flex flex-col'>
-            <div className='mb-4'>
-              <h1 className='text-xl font-semibold text-base-content'>HSC Exam batch result has been published</h1>
-              <div className='flex gap-4'>
-                <span>by Admin1</span>
-                <span>45 hours ago</span>
-              </div>
-            </div>
-            <div className='flex justify-center items-center'>
-              <div className='bg-slate-500 self-stretch w-1 rounded-full mr-2 flex-shrink-0'></div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium obcaecati dolores sequi, neque dolorem veniam reprehenderit hic excepturi ut temporibus ipsa architecto eveniet? Blanditiis dolores odit eos incidunt? Et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate harum blanditiis consequuntur, natus culpa nemo doloremque corrupti voluptatibus illum nobis! Fugit laboriosam omnis eveniet voluptatem error eaque dignissimos qui? Result has been published but there is a problem man. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus corrupti, ducimus doloribus, nihil soluta iste sapiente aut maiores sint autem delectus recusandae cum quas. Earum optio nemo pariatur rem.
-              </p>
-            </div>
-            <div className='p-2 rounded-md border border-gray-500 mt-3 mb-4'>
-              <div className='flex justify-between items-center'>
-                <div>
-                  12123 views +123 votes
-                </div>
-                <div>
-                  Admin1  45 hours ago  23 comments
-                </div>
-              </div>
-            </div>
-          </div>
-
+          {
+            PostState.posts.map(dt => <BlogFeed key={dt.id} id={dt.id} title={dt.title} body={dt.body} heart={dt.heart} comment={dt.comments} author={dt.author} />)
+          }
           {/* Pagination */}
           <div class="btn-group mb-10">
             <button class="btn">1</button>
@@ -74,7 +24,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='hidden col-span-0 lg:col-span-4 lg:flex flex-col justify-start items-center mt-10'>
+      <div className='hidden col-span-0 md:flex md:col-span-4 lg:col-span-4 lg:flex flex-col justify-start items-center mt-10'>
         {/* Side bar contents here */}
         <div className='bg-base-200 border border-base-300 m-4 w-5/6 rounded-lg flex flex-col shadow-sm'>
           <div className='p-2 border-b border-base-300 flex justify-center items-center'>

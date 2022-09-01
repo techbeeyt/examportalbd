@@ -3,12 +3,14 @@ import AppState from "./AppState";
 import AuthState from "./AuthState";
 import LoadData from './LoadDataFromServer';
 import FormState from './FormState';
+import PostState from './BlogPostState';
 
 const reducer = {
     AppState,
     AuthState,
     LoadData,
-    FormState
+    FormState,
+    PostState,
 }
 
 const store = configureStore({
