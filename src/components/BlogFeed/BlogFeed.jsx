@@ -9,7 +9,7 @@ const BlogFeed = ({id, title, body, heart, comment, author}) => {
   return (
     <div className='flex flex-col'>
       <div className='mb-4'>
-        <Link className='text-xl font-semibold text-sky-600' to={`/blogs/${entry}`}>{title}</Link>
+        <Link className='text-xl font-semibold text-sky-600' to={`/blogs/${id}`}>{title}</Link>
         <div className='flex gap-4'>
           <div>by <Link to={`/users/Admin1`} className="text-gray-600 font-semibold">{author}</Link></div>
           <span className='text-gray-500'>45 hours ago</span>

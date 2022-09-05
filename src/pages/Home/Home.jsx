@@ -82,7 +82,7 @@ const Home = () => {
 
         <div className='bg-base-200 m-4 w-5/6 rounded-lg flex flex-col shadow-md'>
           <div className='p-2 border-b border-base-300'>
-            <h1 className='text-lg font-semibold pl-4 pl-4'>Live Exams</h1>
+            <h1 className='text-lg font-semibold pl-4'>Live Exams</h1>
           </div>
           <div className='flex flex-col justify-start items-center'>
             <span className='font-semibold text-sky-600'>Exam name</span>

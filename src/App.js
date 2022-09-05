@@ -10,6 +10,8 @@ import { useEffect } from "react";
 import { setTheme } from "./store/AppState";
 import { getData } from './store/LoadDataFromServer';
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import BlogPage from "./pages/Blogs/BlogPage";
+import BlogDetails from "./pages/Blogs/BlogDetails";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -39,6 +41,10 @@ const App = () => {
               <Route path="forgotpassword"  element={<ForgotPassword />} />
             </Route>
             <Route path="/register" element={<Register />} />
+            <Route path="/blogs">
+              <Route path="" element={<BlogPage />} />
+              <Route path=":blogId" element={<BlogDetails />} />
+            </Route>
           </Routes>
           <Footer />
           {/* For logged user */}
