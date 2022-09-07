@@ -12,6 +12,7 @@ import { getData } from './store/LoadDataFromServer';
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import BlogPage from "./pages/Blogs/BlogPage";
 import BlogDetails from "./pages/Blogs/BlogDetails";
+import MyDashboard from "./pages/MyDashboard/MyDashboard";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ const App = () => {
               <Route path="" element={<BlogPage />} />
               <Route path=":blogId" element={<BlogDetails />} />
             </Route>
+            <Route path="/dashboard" element={<MyDashboard />} />
           </Routes>
           <Footer />
           {/* For logged user */}

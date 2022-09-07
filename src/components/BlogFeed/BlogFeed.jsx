@@ -35,13 +35,13 @@ const BlogFeed = ({id, title, body, heart, comment, author}) => {
           </div>
           <div className='flex justify-center items-center gap-2'>
             <div className='flex justify-center items-center gap-1'>
-              <AiOutlineUser size={20} /> <span>{author}</span>
+              <AiOutlineUser size={20} /> <Link to="/users/Admin1" className='text-gray-500'>{author}</Link>
             </div>
             <div className='flex justify-center items-center gap-1'>
-              <AiOutlineClockCircle size={20} /> <span>45 hours ago</span>
+              <AiOutlineComment size={20} /> <Link className='text-gray-500' to={`/blogs/${id}#comments`}>{`${comment} comments`}</Link>
             </div>
             <div className='flex justify-center items-center gap-1'>
-              <AiOutlineComment size={20} /> <span>{`${comment} comments`}</span>
+              <AiOutlineClockCircle size={20} /> <span className='text-gray-400'>45 hours ago</span>
             </div>
           </div>
         </div>
